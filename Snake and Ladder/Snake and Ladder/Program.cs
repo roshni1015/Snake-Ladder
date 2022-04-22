@@ -4,9 +4,11 @@ int playerPosition = 0;
 Console.WriteLine(playerPosition);
 Random random = new Random();
 int isWin = 100;
+int count = 0;
 while (playerPosition <= isWin)
 {
     int rollDie = random.Next(1, 7);
+    count++;
     Console.WriteLine(rollDie);
     int options = random.Next(0, 3);
     switch (options)
@@ -36,6 +38,8 @@ Console.WriteLine(playerPosition);
 if (playerPosition == isWin)
 {
     Console.WriteLine("You Won!!");
+    Console.WriteLine("Number of times the dice was rolled to win the game", count);
+
 }
 
 
