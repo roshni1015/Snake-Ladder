@@ -3,10 +3,12 @@ Console.WriteLine("Welcome to Snake and Ladder");
 int playerPosition = 0;
 Console.WriteLine(playerPosition);
 Random random = new Random();
-int rollDie = random.Next(1, 7);
-Console.WriteLine(rollDie);
-int options = random.Next(0, 3);
-switch (options)
+int isWin = 100;
+while (playerPosition <= isWin)
+{
+    int rollDie = random.Next(1, 7);
+    int options = random.Next(0, 3);
+    switch (options)
 {
     case 0:
         Console.WriteLine("NO_PLAY");
@@ -28,5 +30,11 @@ switch (options)
         break;
 }
 Console.WriteLine(playerPosition);
+}
+Console.WriteLine(playerPosition);
+if (playerPosition == isWin)
+{
+    Console.WriteLine("You Won!!");
+}
 
 
